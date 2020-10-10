@@ -1,5 +1,8 @@
 h1 {
-    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 #book-form {
@@ -7,4 +10,21 @@ h1 {
     top: 10%;
     right: 10%;
 }
-#book-form > * { display: block; }
+#book-form > * { display: block;}
+
+#books {
+    align-self: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+}
+
+#books > *{
+    background-color: aquamarine;
+    padding: 15px;
+    width: 50%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}

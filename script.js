@@ -37,6 +37,9 @@ function display() {
     document.getElementById('books').innerHTML = ''
     for (let i=0; i<library.length; i++) {
         let div = document.createElement("div")
+        let div2 = document.createElement("div")
+        let div3 = document.createElement("div")
+        
         if (library[i].read == true) {
             div.innerHTML = library[i].title + ', ' + library[i].author + ", " + library[i].pages + ', ' + 'read'
         } else {
@@ -46,15 +49,17 @@ function display() {
         erase.innerText = 'Erase'
         erase.id = i
         erase.addEventListener('click', deleteBook)
-        div.appendChild(erase)
+        div2.appendChild(erase)
         
         let readStatus = document.createElement('button')
         readStatus.innerText = 'Change Read Status'
         readStatus.id = i
         readStatus.addEventListener('click', changeReadStatus)
-        div.appendChild(readStatus)
+        div2.appendChild(readStatus)
 
-        document.getElementById('books').appendChild(div);
+        div3.appendChild(div);
+        div3.appendChild(div2);
+        document.getElementById('books').appendChild(div3)
     }
 }
 
